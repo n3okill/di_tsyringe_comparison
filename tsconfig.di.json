@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "lib": [
+      "ESNext.Decorators"
+    ] /* Specify a set of bundled library declaration files that describe the target runtime environment. */,
+    "rootDir": "src/dymexjs_di" /* Specify the root folder within your source files. */,
+    "outDir": "dist/dymexjs_di" /* Specify an output folder for all emitted files. */
+  },
+  "include": ["src/dymexjs_di/**/*"]
+}

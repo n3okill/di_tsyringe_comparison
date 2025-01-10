@@ -1,0 +1,43 @@
+{
+  "name": "di_tsyringe_comparison",
+  "version": "0.0.1",
+  "description": "Comparison between @dymexjs/di and tsyringe",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/dymexjs_di/index.js",
+  "types": "dist/dymexjs_di/index.d.ts",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n3okill/di_tsyringe_comparison.git"
+  },
+  "bugs": {
+    "url": "https://github.com/n3okill/di_tsyringe_comparison/issues"
+  },
+  "scripts": {
+    "build": "npx tsc -p tsconfig.di.json && npx tsc -p tsconfig.tsyringe.json",
+    "lint": "eslint",
+    "run": "node dist/dymexjs_di/index.js && node dist/tsyringe/index.js",
+    "build:run": "npm run build && npm run run",
+    "format": "prettier --config .prettierrc \"src/**/*.ts\" --write"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@types/node": "^22.10.5",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-security": "^3.0.1",
+    "globals": "^15.14.0",
+    "prettier": "3.3.3",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.19.1"
+  },
+  "author": "João Parreira",
+  "license": "ISC",
+  "dependencies": {
+    "@dymexjs/di": "file:../di",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.8.0"
+  }
+}
